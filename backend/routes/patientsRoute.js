@@ -1,5 +1,11 @@
 const express = require('express')
-const Patient = require('../models/patientsModel')
+
+//const Patient = require('../models/patientsModel')
+
+const {
+    createPatient,
+} = require('../controllers/patientsController')
+
 const router = express.Router()
 
 //GET all patients
@@ -13,17 +19,7 @@ router.get('/:id', (req,res) => {
 })
 
 //POST a new patient
-router.post('/', (req,res) => {
-    res.json({messg: 'POST NEW'})
-   /* const {title, age, mobile} = req.body
-
-    try{
-        const patient = patient.create(title, age, mobile)
-        res.status(200).json(patient)
-    }catch(error) {
-        res.status(400).json({error:error.message})
-    }*/
-})
+router.post('/', createPatient)
 
 //DELETE a patient
 router.delete('/:id', (req,res) => {
