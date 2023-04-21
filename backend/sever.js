@@ -30,15 +30,13 @@ mongoose.connect(process.env.MONGO_URI)
         console.log(error)
     })
 
-/*app.get('/', (req,res) => {
+process.env
+
+
+    /*app.get('/', (req,res) => {
     res.json({message: 'Welcome To the App'})
 })*/
-
-
-
 //listen for request
 /*app.listen(process.env.PORT, () => {
     console.log('listening on PORT 4000')
 })*/
-
-process.env
